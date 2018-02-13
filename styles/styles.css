@@ -16,3 +16,41 @@ section {
   text-align: center;
   border: 2px solid silver;
 }
+section {
+  background: white;
+}
+section:nth-child(2) {
+  background: black;
+  color: white;
+}
+section:nth-child(3) {
+  background: #090;
+  color: white;
+}
+section:nth-child(4) {
+  background: #8f5;
+}
+section:nth-child(5) {
+  background: #dd6;
+}
+section:nth-child(7) {
+  background: #e03;
+  color: white;
+}
+section:nth-child(9) {
+  color: white;
+  background: #92f;
+}
+
+
+/*
+1 white water
+2 black earth
+3 green wood
+4 light green wood
+5 dull yellow earth
+6 white metal
+7 red metal
+8 white earth
+9 purple fire
+*/
