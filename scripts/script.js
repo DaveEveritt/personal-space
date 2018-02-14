@@ -8,15 +8,19 @@
     window.fetch(getData)
     .then(function(response){
       return response.json();
-    }).then(function(theData){
-      return console.log(theData[0]);
+    }).then(function(json){
+      console.log(json[0]);
+      // nothing?:
+      return json;
     });
-    // return theData;
+    // fails:
+    // return json;
   }
   
-  // these also shows the data:
   getData(noaaScales);
+
+  // undefined, json is not returned:
   const noaaData = getData(noaaScales);
-  // console.log(noaaData[0].DateStamp);
+  console.log(noaaData);
 
 })();
