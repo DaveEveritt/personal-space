@@ -1,16 +1,22 @@
 "use strict";
 
 (function(){
-  // let data = "hello";
-  // console.log(data);
 
-  // test:
-  window.fetch('http://services.swpc.noaa.gov/products/noaa-scales.json')
+  const noaaScales = 'http://services.swpc.noaa.gov/products/noaa-scales.json';
+
+  const getData = function(getData) {
+    window.fetch(getData)
     .then(function(response){
-        return response.json();
-    }).then(function(json){
-        return console.log(json);
+      return response.json();
+    }).then(function(theData){
+      return console.log(theData[0]);
     });
+    // return theData;
+  }
+  
+  // these also shows the data:
+  getData(noaaScales);
+  const noaaData = getData(noaaScales);
+  // console.log(noaaData[0].DateStamp);
+
 })();
-
-
