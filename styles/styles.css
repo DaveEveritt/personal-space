@@ -1,5 +1,4 @@
 body {
-  
   margin: 0;
   background: #eee;
   display: flex;
@@ -7,6 +6,7 @@ body {
   flex-wrap: wrap;
   font-family: Tahoma, Arial, Helvetica, sans-serif;
   font-size: 8vh;
+  background: black;
 }
 section {
   box-sizing: border-box;
@@ -18,30 +18,44 @@ section {
 }
 section {
   background: white;
+  animation: fading 8s infinite ease-in-out;
 }
 section:nth-child(2) {
   background: black;
   color: white;
+  animation-duration: 4s;
 }
 section:nth-child(3) {
   background: #090;
   color: white;
+  animation-duration: 5s;
 }
 section:nth-child(4) {
   background: #8f5;
+  animation-duration: 6s;
 }
 section:nth-child(5) {
   background: #dd6;
+  animation-duration: 7s;
 }
 section:nth-child(7) {
   background: #e03;
   color: white;
+  animation-duration: 8s;
 }
 section:nth-child(9) {
   color: white;
   background: #92f;
+  animation-duration: 9s;
 }
 
+
+/* animations */
+
+@keyframes fading {
+  0%,100% { opacity: 0 }
+  50% { opacity: 1 }
+}
 
 /*
 1 white water

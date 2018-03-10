@@ -28,3 +28,7 @@
 
 })();
 // https://github.com/CTEC3905/08-lab-json-ajax/blob/flickr/javascript/scripts.js
+
+// try:
+// http://services.swpc.noaa.gov/products/solar-wind/plasma-7-day.json
+// http://services.swpc.noaa.gov/experimental/products/geospace/geomagnetic-indices.json
