@@ -7,7 +7,6 @@ body {
   font-family: Tahoma, Arial, Helvetica, sans-serif;
   font-size: 8vh;
   background: #001 url(../images/deep-space.jpg);
-  background-size: cover;
 }
 section {
   box-sizing: border-box;
@@ -17,35 +16,51 @@ section {
   text-align: center;
 }
 section {
-  animation: fading 12s infinite ease-in-out;
+  background: white;
+  animation: fading infinite ease-in-out;
+}
+section:nth-child(1) {
+  background: #001;
+  color: #ddd;
+  animation-duration: 6s;
 }
 section:nth-child(2) {
   background: black;
   color: white;
-  animation-duration: 8s;
+  animation-duration: 7s;
 }
 section:nth-child(3) {
   background: #090;
   color: white;
-  animation-duration: 10s;
+  animation-duration: 8s;
 }
 section:nth-child(4) {
   background: #8f5;
-  animation-duration: 12s;
+  animation-duration: 9s;
 }
 section:nth-child(5) {
   background: #dd6;
-  animation-duration: 14s;
+  animation-duration: 10s;
+}
+section:nth-child(6) {
+  background: #001;
+  color: #ddd;
+  animation-duration: 11s;
 }
 section:nth-child(7) {
   background: #e03;
   color: white;
-  animation-duration: 16s;
+  animation-duration: 12s;
+}
+section:nth-child(8) {
+  background: #ddd;
+  color: #001;
+  animation-duration: 13s;
 }
 section:nth-child(9) {
   color: white;
   background: #92f;
-  animation-duration: 18s;
+  animation-duration: 16s;
 }
 
 
