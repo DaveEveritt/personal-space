@@ -17,35 +17,35 @@ section {
   text-align: center;
 }
 section {
-  animation: fading 8s infinite ease-in-out;
+  animation: fading 12s infinite ease-in-out;
 }
 section:nth-child(2) {
   background: black;
   color: white;
-  animation-duration: 4s;
+  animation-duration: 8s;
 }
 section:nth-child(3) {
   background: #090;
   color: white;
-  animation-duration: 5s;
+  animation-duration: 10s;
 }
 section:nth-child(4) {
   background: #8f5;
-  animation-duration: 6s;
+  animation-duration: 12s;
 }
 section:nth-child(5) {
   background: #dd6;
-  animation-duration: 7s;
+  animation-duration: 14s;
 }
 section:nth-child(7) {
   background: #e03;
   color: white;
-  animation-duration: 8s;
+  animation-duration: 16s;
 }
 section:nth-child(9) {
   color: white;
   background: #92f;
-  animation-duration: 9s;
+  animation-duration: 18s;
 }
 
 
