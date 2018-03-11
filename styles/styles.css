@@ -6,7 +6,8 @@ body {
   flex-wrap: wrap;
   font-family: Tahoma, Arial, Helvetica, sans-serif;
   font-size: 8vh;
-  background: black;
+  background: #001 url(../images/deep-space.jpg);
+  background-size: cover;
 }
 section {
   box-sizing: border-box;
@@ -14,10 +15,8 @@ section {
   line-height: 33.33333vh;
   width: 33.33333%;
   text-align: center;
-  border: 2px solid silver;
 }
 section {
-  background: white;
   animation: fading 8s infinite ease-in-out;
 }
 section:nth-child(2) {
