@@ -4,15 +4,17 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  font-family: Tahoma, Arial, Helvetica, sans-serif;
-  font-size: 8vh;
+  /* font-family: Tahoma, Arial, Helvetica, sans-serif; */
+  font-size: 6vh;
   background: #001 url(../images/deep-space.jpg);
 }
 section {
   box-sizing: border-box;
   height: 33.33333vh;
-  line-height: 33.33333vh;
+  /* line-height: 33.33333vh; */
+  line-height: 11.11111vh;
   width: 33.33333%;
+  /* margin: auto; */
   text-align: center;
 }
 section {

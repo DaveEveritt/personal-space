@@ -6,7 +6,8 @@
   let wordData = "";
   
   for (key in obj.words) {
-    wordData += `${obj.words[key].file}\n${obj.words[key].title}\n${obj.words[key].images}\n\n`;
+    let text = obj.words[key].text.substring(0, 80);
+    wordData += `${obj.words[key].file}\n${obj.words[key].title}\n${text}\n\n`;
   }
   console.log(wordData);
   // demoData.innerHTML = wordData;
