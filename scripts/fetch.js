@@ -3,36 +3,37 @@
 
 (function(){
 
-  let request = new Request('http://services.swpc.noaa.gov/products/noaa-scales.json');
-
-  // let spaceData = [];
+  const url = new Request('http://services.swpc.noaa.gov/experimental/products/geospace/geomagnetic-indices.json');
   let spaceData = "";
+  // time_tag, dst, kp, au, al, ae, ao
 
-  fetch(request)
-    .then(function (response) {
-    // console.log(`res: ${response.status}`);
+  fetch(url)
+  .then(function (response) {
+    console.log(`response: ${response.status}`);
+    // console.log(response.json());
     return response.json();
-    })
-    .then(function(data) {
+  })
+  .then(function(data) {
     for(let key in data) {
-      let x = data;
-      // spaceData = `${x.R.Scale}, ${x.S.Scale}, ${x.G.Scale}`;
-      // spaceData += x.R.Scale + "," + x.S.Scale + "," + x.G.Scale + "\n";
-      // spaceData += x[key]["dst"] + "\n";
-      spaceData += x[key["dst"]] + "\n";
+      // console.log(data[1]);
+      spaceData += `DateTime: ${data[key][0]}, dst: ${data[key][1]}, kp: ${data[key][2]}, au: ${data[key][3]}, al: ${data[key][4]}, ae: ${data[key][5]}, ao: ${data[key][6]}\n`;
+      // TODO: rmove first (header) row
     }
-    console.log(spaceData);
-    // return(spaceData);
+    showData(spaceData);
+  }).catch(function() {
+    console.log("Data could not be fetched")
   });
 
-  // console.log(spaceData);
+  function showData(spd) {
+    console.log(spd);
+  }
 
 })();
-// general data page
-// https://github.com/CTEC3905/08-lab-json-ajax/blob/flickr/javascript/scripts.js
 
 // previous data (too minimal) but as object {}:
 // http://services.swpc.noaa.gov/products/noaa-scales.json
+      // spaceData = `${x.R.Scale}, ${x.S.Scale}, ${x.G.Scale}`;
+      // spaceData += x.R.Scale + "," + x.S.Scale + "," + x.G.Scale + "\n";
 
 // solar wind plasma is slower to change:
 // http://services.swpc.noaa.gov/products/solar-wind/plasma-7-day.json

@@ -9,7 +9,7 @@
     let text = obj.words[key].text.substring(0, 80);
     wordData += `${obj.words[key].file}\n${obj.words[key].title}\n${text}\n\n`;
   }
-  console.log(wordData);
+  // console.log(wordData);
   // demoData.innerHTML = wordData;
 }());
  
