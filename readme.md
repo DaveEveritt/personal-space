@@ -2,6 +2,8 @@
 
 An online artwork based on connecting personal diary-like text to astronomical data.
 
+[View Space Weather Words here](https://daveeveritt.github.io/space-weather-words/).
+
 ## References
 
 - [loshu colours](http://www.taliscope.com/LoShu_en.html)
@@ -24,3 +26,11 @@ An online artwork based on connecting personal diary-like text to astronomical d
 ### Space Weather
 
 - [Best source of live JSON data for Solar & Geomagnetic activity (Space Weather Live forum)](https://www.spaceweatherlive.com/community/topic/1361-best-source-of-live-json-data-for-solar-geomagnetic-activity/)
+
+## TO DO
+
+- [ ] fix http/https clash
+- [ ] work out 3 categories
+- [ ] normalise data
+- [ ] remove first row from data
+
