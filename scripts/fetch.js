@@ -10,18 +10,16 @@
   fetch(url)
   .then(function (response) {
     console.log(`response: ${response.status}`);
-    // console.log(response.json());
     return response.json();
   })
   .then(function(data) {
     for(let key in data) {
-      // console.log(data[1]);
       spaceData += `DateTime: ${data[key][0]}, dst: ${data[key][1]}, kp: ${data[key][2]}, au: ${data[key][3]}, al: ${data[key][4]}, ae: ${data[key][5]}, ao: ${data[key][6]}\n`;
       // TODO: rmove first (header) row
     }
     showData(spaceData);
   }).catch(function() {
-    console.log("Data could not be fetched")
+    console.log("Data could not be fetched");
   });
 
   function showData(spd) {
