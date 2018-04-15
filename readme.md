@@ -29,7 +29,7 @@ An online artwork based on connecting personal diary-like text to astronomical d
 
 ## TO DO
 
-- [ ] fix http/https clash
+- [X] fix http/https clash
 - [ ] work out 3 categories
 - [ ] normalise data
 - [ ] remove first row from data
