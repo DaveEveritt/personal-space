@@ -17,7 +17,6 @@
   */ 
 
   let spaceData = "";
-  // time_tag, dst, kp, au, al, ae, ao
 
   fetch(url)
   .then(function (response) {
@@ -41,12 +40,12 @@
   });
 
   function dataShowKP(kp, au) {
-    // console.log(getDataScale(kp));
-    document.getElementById("five").innerHTML = `Kp: ${getDataScale(kp)}<br>au: ${au}`;
+    // console.log(kp);
+    document.getElementById("five").innerHTML = `Kp ${getDataScale(kp)}<br>au: ${au}`;
   }
   function getDataScale(kp) {
     // 0-1 quiet, 2-4 unsettled/active, 5 minor storm, 6 larger storm, 7-9 major storm
-    let kpf = parseFloat(kp);
+    let kpf = parseFloat(kp).toFixed(2);
     console.log(kpf);
     switch (true) {
       case kpf < 1:

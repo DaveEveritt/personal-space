@@ -17,6 +17,7 @@ section {
   text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-shadow: #fff 0 0 8px;
 }
 section {
   background: white;
@@ -39,16 +40,18 @@ section:nth-child(3) {
 }
 section:nth-child(4) {
   background: #8f5;
+  text-shadow: #001 0 0 4px;
   animation-duration: 9s;
 }
 section:nth-child(5) {
-  background: transparent url(../images/sun.gif);
-  background-size: cover;
-  background-position-y: 7px;
+  background: transparent url(../images/sun.gif) no-repeat;
+  /* background-size: 120%;
+  background-position: 48% 5%; */
+  background-size: 102% auto cover;
+  background-position: 48% 50%;
   color: #001;
   font-weight: bold;
   padding-top: 7.5%;
-  text-shadow: #eee 0 0 4px;
 }
 section:nth-child(6) {
   background: #001;
@@ -62,7 +65,7 @@ section:nth-child(7) {
 }
 section:nth-child(8) {
   background: #ddd;
-  color: #001;
+  text-shadow: #001 0 0 4px;
   animation-duration: 13s;
 }
 section:nth-child(9) {
