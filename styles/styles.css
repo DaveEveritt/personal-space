@@ -13,7 +13,7 @@ section {
   height: 33.33333vh;
   width: 33.33333%;
   line-height: 7.7vh;
-  padding: 2vh 5%;
+  padding: 2vh 2%;
   text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -44,7 +44,11 @@ section:nth-child(4) {
 section:nth-child(5) {
   background: transparent url(../images/sun.gif);
   background-size: cover;
-  color: #333;
+  background-position-y: 7px;
+  color: #001;
+  font-weight: bold;
+  padding-top: 7.5%;
+  text-shadow: #eee 0 0 4px;
 }
 section:nth-child(6) {
   background: #001;
@@ -72,7 +76,7 @@ section:nth-child(9) {
 
 @keyframes fading {
   0%,100% { opacity: 0 }
-  50% { opacity: 1 }
+  50% { opacity: 0.9 }
 }
 
 /*

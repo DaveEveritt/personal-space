@@ -27,7 +27,6 @@
   .then(function(data) {
     let dl = data.length -1;
     // console.log(dl);
-    // console.log(data[dl][2], data[dl][3]);
     dataShowKP(data[dl][2], data[dl][3]);
     /*
     no need to loop through
@@ -41,13 +40,8 @@
     console.log("Data not available");
   });
 
-  // function showData(spd) {
-  //   console.log(spd);
-  // }
   function dataShowKP(kp, au) {
-    // let dataScale = getDataScale(kp);
-    console.log(getDataScale(kp));
-    // document.getElementById("five").innerHTML = `Kp: ${kp.toFixed(2)}<br>au: ${au}`;
+    // console.log(getDataScale(kp));
     document.getElementById("five").innerHTML = `Kp: ${getDataScale(kp)}<br>au: ${au}`;
   }
   function getDataScale(kp) {
@@ -86,6 +80,8 @@
   }
 
 })();
+
+// https://scotch.io/tutorials/how-to-use-the-javascript-fetch-api-to-get-data
 
 // solar wind plasma is slower to change:
 // http://services.swpc.noaa.gov/products/solar-wind/plasma-7-day.json
