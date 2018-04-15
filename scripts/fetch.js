@@ -3,7 +3,7 @@
 
 (function(){
 
-  const url = new Request('http://services.swpc.noaa.gov/experimental/products/geospace/geomagnetic-indices.json');
+  const url = new Request('https://services.swpc.noaa.gov/experimental/products/geospace/geomagnetic-indices.json');
   let spaceData = "";
   // time_tag, dst, kp, au, al, ae, ao
 
