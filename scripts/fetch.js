@@ -48,37 +48,39 @@
     // let dataScale = getDataScale(kp);
     console.log(getDataScale(kp));
     // document.getElementById("five").innerHTML = `Kp: ${kp.toFixed(2)}<br>au: ${au}`;
-    document.getElementById("five").innerHTML = `Kp: ${parseFloat(kp)}<br>au: ${au}`;
+    document.getElementById("five").innerHTML = `Kp: ${getDataScale(kp)}<br>au: ${au}`;
   }
   function getDataScale(kp) {
     // 0-1 quiet, 2-4 unsettled/active, 5 minor storm, 6 larger storm, 7-9 major storm
-    let kpf = parseFloat(kp).toFixed(2);
-    // kpf = 9;
-    console.log(kpf < 5);
-    switch (kpf) {
-      case (kpf < 1.00):
-        return "quiet";
+    let kpf = parseFloat(kp);
+    console.log(kpf);
+    switch (true) {
+      case kpf < 1:
+        return `${kpf}: peaceful`;
         break;
-      case (kpf < 1.50):
-        return "quiet-ish";
+      case kpf <= 1.5:
+        return `${kpf}: relaxed`;
         break;
-      case (kpf < 2.00):
-        return "less quiet";
+      case kpf < 2:
+        return `${kpf}: stirring`;
         break;
-      case (kpf < 5.00):
-        return "active";
+      case kpf < 4:
+        return `${kpf}: unsettled`;
         break;
-      case (kpf < 6.00):
-        return "minor storm";
+      case kpf < 5:
+        return `${kpf}: agitated`;
         break;
-      case (kpf < 7.00):
-        return "larger storm";
+      case kpf < 6:
+        return `${kpf}: blustery`;
         break;
-      case (kpf < 10.00):
-        return "major storm";
+      case kpf < 7:
+        return `${kpf}: stormy`;
+        break;
+      case kpf <= 10:
+        return `${kpf}: major storm`;
         break;
       default:
-        return "out of range";
+        return "error"
         break;
     }
   }
