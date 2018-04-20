@@ -63,7 +63,7 @@
 
   function dataShowKP(kp, au) {
     // console.log(kp);
-    document.getElementById("five").innerHTML = `Kp ${getDataScale(kp)}<br>au: ${au}`;
+    document.getElementById("five").innerHTML = `Kp ${getDataScale(kp)}<br>Solar wind: ${au}AU`;
   }
   function getDataScale(kp) {
     // 0-1 quiet, 2-4 unsettled/active, 5 minor storm, 6 larger storm, 7-9 major storm
@@ -92,7 +92,7 @@
         return `${kpf}: stormy`;
         break;
       case kpf <= 10:
-        return `${kpf}: major storm`;
+        return `${kpf}: big storm`;
         break;
       default:
         return "error"

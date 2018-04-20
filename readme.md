@@ -30,8 +30,8 @@ An online artwork based on connecting personal diary-like text to astronomical d
 ## TO DO
 
 - [X] fix http/https clash
-- [ ] get data to update regualrly
+- [ ] refresh data regualrly
+- [ ] central sun image to reflect intensity
 - [ ] normalise data
 - [ ] work out 3 categories
-- [ ] remove first row from data
 
