@@ -4,25 +4,35 @@
 
   let obj = JSON.parse(jsonString);
   let wordData = "";
+
+  window.addEventListener("load", getData);
   
-  for (key in obj.words) {
-    let text = obj.words[key].text;
-    // let text = obj.words[key].text.substring(0, 55);
-    wordData += ` ${text}`;
-    // wordData += `${obj.words[key].file}\n\n${obj.words[key].title}\n${text}\n\n`;
+  function getData() {
+    // alert("hello");
+    for (key in obj.words) {
+      let text = obj.words[key].text;
+      // let text = obj.words[key].text.substring(0, 55);
+      wordData += ` ${text}`;
+      wordData += `${obj.words[key].created_date}:\n${text}\n\n`;
+    }
+    console.log(`${wordData}`);
+    
+    let x = 0;
+    let x2 = 60;
+    for (panel in panels) {
+      // 10000 is a guess, need exact number
+      x = parseInt(Math.random()*10000);
+      console.log(x + "\n");
+      document.getElementById(panels[panel]).innerHTML = wordData.substring(x, x + x2);
+      x += x2;
+      x2 += x2;
+    }
   }
-  // console.log(`${wordData}`);
+
+  setInterval(function(){
+    getData();
+  }, 200000);
   
-  let x = 0;
-  let x2 = 60;
-  for (panel in panels) {
-    // 10000 is a guess, need exact number
-    x = parseInt(Math.random()*10000);
-    console.log(x + "\n");
-    document.getElementById(panels[panel]).innerHTML = wordData.substring(x, x + x2);
-    x += x2;
-    x2 += x2;
-  }
 }());
 
 /*

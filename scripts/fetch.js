@@ -35,36 +35,35 @@
   });
 
   https://techoctave.com/c7/posts/60-simple-long-polling-example-with-javascript-and-jquery
-  setTimeout(function(){
-    do stuff
-  }, 30000); //30 seconds
+  5 minutes would be 5 * 60 * 1000
 */
+  window.addEventListener("load", getSpaceData);
 
-  fetch(url)
-  .then(function (response) {
-    console.log(`response: ${response.status}`);
-    return response.json();
-  })
-  .then(function(data) {
-    let dl = data.length -1;
-    // console.log(dl);
-    dataShowKP(data[dl][2], data[dl][3]);
-    /*
-    no need to loop through
-    for(let key in data) {
-      spaceData += `DateTime: ${data[key][0]}, ${dataScaleKP(data[key][2], data[key][3])}\n`;
-      spaceData += `DateTime: ${data[key][0]}, dst: ${data[key][1]}, kp: ${data[key][2]}, au: ${data[key][3]}, al: ${data[key][4]}, ae: ${data[key][5]}, ao: ${data[key][6]}\n`;
-    }
-    // showData(spaceData);
-    */
-  }).catch(function() {
-    console.log("Data not available");
-  });
+  function getSpaceData() {
+    fetch(url)
+    .then(function (response) {
+      console.log(`response: ${response.status}`);
+      return response.json();
+    })
+    .then(function(data) {
+      let dl = data.length -1;
+      // console.log(dl);
+      dataShowKP(data[dl][2], data[dl][3]);
+    }).catch(function() {
+      console.log("Data not available");
+    });
+  }
+
+  setInterval(function(){
+    getSpaceData();
+  }, 30000);
+  
 
   function dataShowKP(kp, au) {
     // console.log(kp);
     document.getElementById("five").innerHTML = `Kp ${getDataScale(kp)}<br><br>Solar wind: ${au}AU`;
   }
+
   function getDataScale(kp) {
     // 0-1 quiet, 2-4 unsettled/active, 5 minor storm, 6 larger storm, 7-9 major storm
     let kpf = parseFloat(kp).toFixed(2);
