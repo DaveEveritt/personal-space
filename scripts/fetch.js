@@ -18,6 +18,28 @@
 
   let spaceData = "";
 
+/*
+  https://jakearchibald.com/2015/thats-so-fetch/  
+  ES6 arrow functions VS JS:
+  
+  fetch(url).then(r => r.json())
+    .then(data => console.log(data))
+    .catch(e => console.log("Ooops"))
+
+  fetch(url).then(function(response) {
+    return response.json();
+  }).then(function(data) {
+    console.log(data);
+  }).catch(function() {
+    console.log("Booo");
+  });
+
+  https://techoctave.com/c7/posts/60-simple-long-polling-example-with-javascript-and-jquery
+  setTimeout(function(){
+    do stuff
+  }, 30000); //30 seconds
+*/
+
   fetch(url)
   .then(function (response) {
     console.log(`response: ${response.status}`);

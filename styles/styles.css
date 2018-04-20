@@ -47,6 +47,7 @@ section:nth-child(5) {
   background: transparent url(../images/sun.gif) no-repeat;
   /* background-size: 120%;
   background-position: 48% 5%; */
+  /* https://css-tricks.com/almanac/properties/b/background-size/ */
   background-size: 102% auto cover;
   background-position: 48% 50%;
   color: #001;
