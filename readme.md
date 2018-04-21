@@ -32,8 +32,9 @@ An online artwork based on connecting personal diary-like text to astronomical d
 - [X] fix http/https clash
 - [x] put random subsrings into panels
 - [x] refresh both text and data regularly
+- [ ] get word boudaries
 - [ ] fade changes to text
-- [ ] prune short text entries
+- [x] prune short text entries
 - [ ] central sun image to reflect intensity
 - [ ] work out categories
 
