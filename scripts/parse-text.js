@@ -7,16 +7,13 @@
 
   window.addEventListener("load", getData);
   
+  for (key in obj.words) {
+    let text = obj.words[key].text;
+    wordData += `${obj.words[key].created_date}:\n${text}\n\n`;
+  }
+  console.log(`${wordData}`);
+  
   function getData() {
-    // alert("hello");
-    for (key in obj.words) {
-      let text = obj.words[key].text;
-      // let text = obj.words[key].text.substring(0, 55);
-      wordData += ` ${text}`;
-      wordData += `${obj.words[key].created_date}:\n${text}\n\n`;
-    }
-    console.log(`${wordData}`);
-    
     let x = 0;
     let x2 = 60;
     for (panel in panels) {
@@ -28,7 +25,6 @@
     }
   }
 
-  // MEMORY LEAK?
   setInterval(function(){
     console.log("Refresh!");
     getData();
