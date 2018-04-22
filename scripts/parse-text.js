@@ -20,18 +20,19 @@
     let x = 0;
     let x2 = 60;
     for (panel in panels) {
-      // 10000 is a guess, need exact number
       x = parseInt(Math.random()*938772);
       console.log(x + "\n");
-      document.getElementById(panels[panel]).innerHTML = wordData.substring(x, x2);
+      document.getElementById(panels[panel]).innerHTML = wordData.substring(x, x + x2);
       x += x2;
       x2 += x2;
     }
   }
 
+  // MEMORY LEAK?
   setInterval(function(){
+    console.log("Refresh!");
     getData();
-  }, 200000);
+  }, 20000);
   
 }());
 
