@@ -1,5 +1,4 @@
 (function(){
-  // let wordData = document.getElementById("words");
   const panels = ["four","nine","two","three","seven","eight","one","six"];
 
   let obj = JSON.parse(jsonString);
@@ -11,22 +10,20 @@
     let text = obj.words[key].text;
     wordData += `${obj.words[key].created_date}:\n${text}\n\n`;
   }
-  console.log(`${wordData}`);
+  // console.log(`${wordData}`);
   
   function getData() {
     let x = 0;
-    let x2 = 60;
+    let x2 = 120;
     for (panel in panels) {
       x = parseInt(Math.random()*938772);
-      console.log(x + "\n");
+      // console.log(`x=${x}, x2=${x2}\n`);
       document.getElementById(panels[panel]).innerHTML = wordData.substring(x, x + x2);
       x += x2;
-      x2 += x2;
     }
   }
 
   setInterval(function(){
-    console.log("Refresh!");
     getData();
   }, 20000);
   
@@ -38,7 +35,6 @@ file "text",
 title "text",
 created_date "2018-02-03 14:28:35",
 text "text",
-images "resources/FILENAME.EXT"
 will fit (55chars):
 And you have read my mind again Alice in these prompts!
 */
