@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  background: #eee;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -13,16 +12,14 @@ section {
   height: 33.33333vh;
   width: 33.33333%;
   line-height: 7.7vh;
-  padding: 2vh 2%;
+  padding: 1vh 2% 2vh;
   text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
   text-shadow: #fff 0 0 8px;
-}
-section {
-  background: white;
   animation: fading infinite ease-in-out;
 }
+
 section:nth-child(1) {
   background: #001;
   color: #ddd;
@@ -48,7 +45,7 @@ section:nth-child(5) {
   /* background-size: 120%;
   background-position: 48% 5%; */
   /* https://css-tricks.com/almanac/properties/b/background-size/ */
-  background-size: 102% auto cover;
+  background-size: 103% auto cover;
   background-position: 48% 50%;
   color: #001;
   font-weight: bold;

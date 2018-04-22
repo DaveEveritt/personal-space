@@ -1,3 +1,5 @@
+"use strict";
+
 (function(){
   const panels = ["four","nine","two","three","seven","eight","one","six"];
 
@@ -6,7 +8,7 @@
 
   window.addEventListener("load", getData);
   
-  for (key in obj.words) {
+  for (let key in obj.words) {
     let text = obj.words[key].text;
     wordData += `${obj.words[key].created_date}:\n${text}\n\n`;
   }
@@ -15,10 +17,18 @@
   function getData() {
     let x = 0;
     let x2 = 120;
-    for (panel in panels) {
+    let textChunk = "";
+    let checkSpaces = "";
+    for (let panel in panels) {
       x = parseInt(Math.random()*938772);
       // console.log(`x=${x}, x2=${x2}\n`);
-      document.getElementById(panels[panel]).innerHTML = wordData.substring(x, x + x2);
+      textChunk = wordData.substring(x, x + x2);
+      checkSpaces = textChunk.charAt(1);
+      if (checkSpaces === " " || checkSpaces === ",") {
+        textChunk = textChunk.substring(2)
+        console.log(textChunk);
+      }
+      document.getElementById(panels[panel]).innerHTML = textChunk;
       x += x2;
     }
   }
@@ -37,4 +47,7 @@ created_date "2018-02-03 14:28:35",
 text "text",
 will fit (55chars):
 And you have read my mind again Alice in these prompts!
+
+charAt() for multilingual plane
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt
 */
