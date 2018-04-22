@@ -36,6 +36,7 @@ An online artwork based on connecting personal diary-like text to astronomical d
 - [ ] use .indexOf(' ') to trim before first word
 - [ ] fade changes to text
 - [x] prune short text entries
-- [ ] central sun image to reflect intensity
+- [x] central sun image to reflect intensity
+- [ ] find slower sun animation
 - [ ] work out categories
 

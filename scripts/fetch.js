@@ -55,14 +55,14 @@
 
   const sunPanel = document.getElementById("five");
   function changeSun(file) {
-    console.log(file);
+    // console.log(file);
     sunPanel.style.backgroundImage = `url(images/sun/sun-${file}.gif)`;
   }
 
   function getDataScale(kp) {
     // 0-1 quiet, 2-4 unsettled/active, 5 minor storm, 6 larger storm, 7-9 major storm
     let kpf = parseFloat(kp).toFixed(2);
-    console.log(kpf);
+    // console.log(kpf);
     switch (true) {
       case kpf < 1:
         changeSun("1");

@@ -19,15 +19,15 @@
     let x2 = 120;
     let textChunk = "";
     let checkStrays = "";
-    let strayChars = [",", ":", ".", ")"];
+    let strayChars = [",", ":", ".", ")", " "];
     for (let panel in panels) {
       x = parseInt(Math.random()*938772);
       // console.log(`x=${x}, x2=${x2}\n`);
       textChunk = wordData.substring(x, x + x2);
       checkStrays = textChunk.charAt(0);
       if (textChunk.charAt(1) === " " || strayChars.includes(checkStrays)) {
-        textChunk = textChunk.substring(1)
-        console.log(textChunk);
+        textChunk = textChunk.substring(1);
+        // console.log(textChunk);
       }
       document.getElementById(panels[panel]).innerHTML = textChunk;
       x += x2;
