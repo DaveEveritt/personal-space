@@ -488,7 +488,7 @@ let jsonString = `
       "file": "cathie responses",
       "title": "",
       "created_date": "",
-      "text": "Day 10. Response. Day 19. Day 14. Response. Day 12. Response. Day 16. Day 11. Response. Day 21. Day 9. Response. Day 3: Response. My hand only one as couldn't take both at the same time! Day 22. Day 8. Response. Day 5: Response. Day 2. Response. How do you nest? What is your experience of nesting? What nests have you built, destroyed, abandoned, redesigned? Day. 18 Day 17. Soup Day 20. Day 6: Response. Day 15. Response. Day 4. Response. Imagine, remember, explore and make present this affective place of feeling… Day 13. Response. Day 1. Response. 1. Attention 2. Acceptance 3. Appreciation 4. Affection 5. Allowing Day 3. Response. I never touch… I like to touch… I am completely in touch with… I have felt touched by… I wish I had touched… I like being touched on… I swear I never touched… I left a mark on… I am touched every time… I like to touch base by… I like"
+      "text": "My hand only one as couldn't take both at the same time! Day 22. Day 8. Response. Day 5: Response. Day 2. Response. How do you nest? What is your experience of nesting? What nests have you built, destroyed, abandoned, redesigned? Soup. Imagine, remember, explore and make present this affective place of feeling… 1. Attention 2. Acceptance 3. Appreciation 4. Affection 5. Allowing Day 3. Response. I never touch… I like to touch… I am completely in touch with… I have felt touched by… I wish I had touched… I like being touched on… I swear I never touched… I left a mark on… I am touched every time… I like to touch base by… I like"
     },
     {
       "id": 73,
@@ -1601,14 +1601,7 @@ let jsonString = `
       "file": "emily responses/Day 15. Response",
       "title": "Day 15. Response.",
       "created_date": "2018-01-27 12:03:25",
-      "text": "Areas to Transform: 1… practice self forgiveness 2… notice the pauses 3… waste less Time worrying about what's happened/decisions 4… spend time with those who nourish rather than drain me. 5… walk in nature 6… drink more water7… sing!"
-    },
-    {
-      "id": 247,
-      "file": "emily responses",
-      "title": "",
-      "created_date": "",
-      "text": "Day 12: Response. Day 18: Response. Day 21: Response. Day 6: Response feminine flowers Day 13: Response Day 17: Response. Day 2: Response Day 16: Response. Day 20: Response. Day 3. Transformational Encounters. Touch. To ‘handle or feel gently usually with the intent to understand or appreciate… to meet without overlapping or penetrating…’. Day 1: Response Day 10: Response. Day 19: Response. Day 11: Response. Day 9: Response Day 8: Response Day 5: Response Tickle Time day 5 Day 14: Response Day 15. Response. Day 7: Response Day 4: Response"
+      "text": "Areas to Transform: 1… practice self forgiveness 2… notice the pauses 3… waste less Time worrying about what's happened/decisions 4… spend time with those who nourish rather than drain me. 5… walk in nature 6… drink more water7… sing! feminine flowers. Touch. To ‘handle or feel gently usually with the intent to understand or appreciate… to meet without overlapping or penetrating…’. Tickle Time"
     },
     {
       "id": 248,
@@ -2932,13 +2925,6 @@ let jsonString = `
       "title": "Day 12. Response.",
       "created_date": "2018-01-29 21:33:45",
       "text": "My relationship map highlighted for me that although I have lots of connections they are more from the past. I found myself struggling to put names down as I realised that the past 10 to 15 years have been built around work. This was an eye opener for me. I spend my time with clients, Supervisees and groups that involve work! I then feel so tired and full that I just want to spend time on my own and in my studio so I withdraw and retire. Being ill has not helped. The last page on my map is pretty much of the social contact I have on any regular basis. The other people in the 3rd sheet I see at times throughout the year or every couple of years. I was in shock. I am in shock. Both Edward and I are like this. My tribe consist of the women I met in my late teens, throughout my first Psychotherapy training and my IATE training and beyond. They don't all live nearby and we don't always have ongoing contact. Because I work so intensely with traumatised people I feel the need to retreat and create space for solitude and quiet. I have needed to let go of a few people (friends)on the way. Some of them were very demanding of me and did not or could not understand my need for my creative space, my creative solitude. Instead, the took offence and were very critical and in some cases demanding more of me. It was at these points when I had to kick them to the curb. I could not keep the wheel spinning. I had to get rid of the dirt that was hanging on and making me feel worthless."
-    },
-    {
-      "id": 463,
-      "file": "donna responses",
-      "title": "",
-      "created_date": "",
-      "text": "Day 4: Response. Day 13. Response. Day 6: Response. Day 18: Response. Day 11. Response. Day 14. Response. Day 1: Response. Day 12. Response. Day 2: Response. Day 7: Response. Day 17: Response. Day 19: Response. Day 8: Response. Day 20: Response. Day 9: Response. Day 15: Response. Day 10. Response. Day 16: Response. Day 3: Response."
     },
     {
       "id": 464,
