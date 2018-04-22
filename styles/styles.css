@@ -17,63 +17,63 @@ section {
   overflow: hidden;
   text-overflow: ellipsis;
   text-shadow: #fff 0 0 8px;
-  animation: fading infinite ease-in-out;
+  animation: fading 8s infinite ease-in-out;
 }
 
 section:nth-child(1) {
   background: #001;
   color: #ddd;
-  animation-duration: 8s;
+  animation-delay: 11s;
 }
 section:nth-child(2) {
   background: black;
   color: white;
-  animation-duration: 9s;
+  animation-delay: 15s;
 }
 section:nth-child(3) {
   background: #090;
   color: white;
-  animation-duration: 10s;
+  animation-delay: 9s;
 }
 section:nth-child(4) {
   background: #8f5;
   text-shadow: #001 0 0 4px;
-  animation-duration: 11s;
+  animation-delay: 10s;
 }
 section:nth-child(5) {
-  background: transparent url(../images/sun.gif) no-repeat;
+  background: transparent url(../images/sun/sun-1.gif) no-repeat;
   /* background-size: 120%;
   background-position: 48% 5%; */
   /* https://css-tricks.com/almanac/properties/b/background-size/ */
   background-size: 103% auto cover;
-  background-position: 48% 50%;
+  background-position: 50% 50%;
   color: #001;
   font-weight: bold;
   font-size: 0.75em;
   line-height: 3.5vh;
   padding-top: 2.5%;
+  animation: none;
 }
 section:nth-child(6) {
   background: #001;
   color: #ddd;
-  animation-duration: 12s;
+  animation-delay: 12s;
 }
 section:nth-child(7) {
   background: #e03;
   color: white;
-  animation-duration: 13s;
+  animation-delay: 13s;
 }
 section:nth-child(8) {
   background: #ddd;
   text-shadow: #001 0 0 4px;
-  animation-duration: 14s;
+  animation-delay: 14s;
 }
 section:nth-child(9) {
   color: white;
   background: #92f;
-  animation-duration: 15s;
+  animation-delay: 12s;
 }
-
 
 /* animations */
 
@@ -92,4 +92,6 @@ section:nth-child(9) {
 7 red metal
 8 white earth
 9 purple fire
+
+8:one 8s, 3:two 9s, 4:three 10s, 1:four 11s, 5:five, 9:six 12s, 6:seven 13s, 7:eight 14s, 2:nine 15s
 */

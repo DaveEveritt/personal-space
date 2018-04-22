@@ -44,13 +44,19 @@
   setInterval(function(){
     getSpaceData();
   }, 30000);
-  // 5 minutes = 5 * 60 * 1000  
+  // 5 minutes = 5 * 60 * 1000
 
   function dataShowKP(kp, au) {
-    document.getElementById("five").innerHTML = `Kp ${getDataScale(kp)}<br><br>Solar wind: ${au}AU`;
+    sunPanel.innerHTML = `Kp ${getDataScale(kp)}<br><br>Solar wind: ${au}AU`;
   }
   function dataNoShow(nodata) {
-    document.getElementById("five").innerHTML = nodata;
+    sunPanel.innerHTML = nodata;
+  }
+
+  const sunPanel = document.getElementById("five");
+  function changeSun(file) {
+    console.log(file);
+    sunPanel.style.backgroundImage = `url(images/sun/sun-${file}.gif)`;
   }
 
   function getDataScale(kp) {
@@ -59,27 +65,35 @@
     console.log(kpf);
     switch (true) {
       case kpf < 1:
+        changeSun("1");
         return `${kpf}: peaceful`;
         break;
       case kpf <= 1.5:
+        changeSun("2");
         return `${kpf}: relaxed`;
         break;
       case kpf < 2:
+        changeSun("3");
         return `${kpf}: stirring`;
         break;
       case kpf < 4:
+        changeSun("4");
         return `${kpf}: unsettled`;
         break;
       case kpf < 5:
+        changeSun("5");
         return `${kpf}: agitated`;
         break;
       case kpf < 6:
+        changeSun("6");
         return `${kpf}: disturbed`;
         break;
       case kpf < 7:
+        changeSun("7");
         return `${kpf}: stormy`;
         break;
       case kpf <= 10:
+        changeSun("8");
         return `${kpf}: extreme`;
         break;
       default:
