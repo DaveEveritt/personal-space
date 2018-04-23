@@ -106,6 +106,16 @@
 })();
 
 /*
+Solar wind directory listing:
+https://services.swpc.noaa.gov/products/solar-wind/
+
+solar wind plasma is slower to change:
+http://services.swpc.noaa.gov/products/solar-wind/plasma-7-day.json
+
+Using geomagnetic index has more variation (nested object literal [[]]):
+https://services.swpc.noaa.gov/experimental/products/geospace/geomagnetic-indices.json
+"time_tag", "dst", "kp", "au", "al", "ae", "ao"
+
 5-minute data:
 https://services.swpc.noaa.gov/products/solar-wind/mag-5-minute.json
 [["time_tag","bx_gsm","by_gsm","bz_gsm","lon_gsm","lat_gsm","bt"],["2018-04-15 09:46:00.000","-3.26","-3.86","-1.89","229.83","-20.51","5.40"],["2018-04-15 09:47:00.000","-3.21","-3.79","-2.08","229.74","-22.76","5.39"]]
@@ -115,12 +125,8 @@ http://services.swpc.noaa.gov/products/summary/solar-wind-speed.json
 {"WindSpeed":"348","TimeStamp":"2018-04-15 09:44:00.000"}
 https://services.swpc.noaa.gov/products/noaa-estimated-planetary-k-index-1-minute.json
 "time_tag","estimated_kp","kp"],["2018-04-15 08:47:00",1.667,"2M"]
-*/ 
 
-// https://scotch.io/tutorials/how-to-use-the-javascript-fetch-api-to-get-data
+https://services.swpc.noaa.gov/products/geospace/planetary-k-index-dst.json
 
-// solar wind plasma is slower to change:
-// http://services.swpc.noaa.gov/products/solar-wind/plasma-7-day.json
-
-// geomagnetic index has more variation (nested object literal [[]]):
-// http://services.swpc.noaa.gov/experimental/products/geospace/geomagnetic-indices.json
+https://scotch.io/tutorials/how-to-use-the-javascript-fetch-api-to-get-data
+*/
