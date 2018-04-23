@@ -8,13 +8,14 @@
   let spaceData = "";
 
 /*
-  https://jakearchibald.com/2015/thats-so-fetch/  
-  ES6 arrow functions VS JS:
+  ES6 arrow functions VS JS: https://jakearchibald.com/2015/thats-so-fetch/  
   
+  ES6:
   fetch(url).then(r => r.json())
     .then(data => console.log(data))
     .catch(e => console.log("Ooops"))
 
+  OLD:
   fetch(url).then(function(response) {
     return response.json();
   }).then(function(data) {
@@ -44,7 +45,7 @@
   setInterval(function(){
     getSpaceData();
   }, 30000);
-  // 5 minutes = 5 * 60 * 1000
+  // 5 minutes: 5 * 60 * 1000
 
   function dataShowKP(kp, au) {
     sunPanel.innerHTML = `Kp ${getDataScale(kp)}<br><br>Solar wind: ${au}AU`;

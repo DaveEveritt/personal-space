@@ -19,9 +19,9 @@
     let x2 = 120;
     let textChunk = "";
     let checkStrays = "";
-    let strayChars = [",", ":", ".", ")", " "];
+    const strayChars = [",", ":", ".", ")", " "];
     for (let panel in panels) {
-      x = parseInt(Math.random()*938772);
+      x = parseInt(Math.random()*919980);
       // console.log(`x=${x}, x2=${x2}\n`);
       textChunk = wordData.substring(x, x + x2);
       checkStrays = textChunk.charAt(0);
@@ -36,7 +36,7 @@
 
   setInterval(function(){
     getData();
-  }, 20000);
+  }, 80000);
   
 }());
 
