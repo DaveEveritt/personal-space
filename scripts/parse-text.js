@@ -1,27 +1,149 @@
 "use strict";
 
-(function(){
+// (function(){
+
   const panels = ["four","nine","two","three","seven","eight","one","six"];
 
   let obj = JSON.parse(jsonString);
   let wordData = "";
+  let wordDataFiltered = "";
 
-  window.addEventListener("load", getData);
+  // window.addEventListener("load", getData);
+
+  window.addEventListener("load", processData);
   
   for (let key in obj.words) {
     let text = obj.words[key].text;
-    wordData += `${obj.words[key].created_date}:\n${text}\n\n`;
+    // console.log(text);
+    wordData += `${text}\n\n`;
+    // wordData += `${obj.words[key].created_date}:\n${text}\n\n`;
   }
-  // console.log(`${wordData}`);
   
+  // console.log(`${wordData}`);
+  // console.log(`${wordData.length}`); // 920404
+  
+
+  let category = {
+    "low": ["lov", "brill", "wonderful", "sex", "tidy", "excit", "respect", "pleasur", "art", "transcend", "beaut", "gentle", "success", "compassion", "hope", "kind", "nurture", "help", "smil", "beautiful", "comfort", "focus", "desir", "energ", "trust", "proud", "appreciat", "affect", "empath"],
+    "mid": ["realisation", "activism", "dance", "doubt", "unusual", "quirky", "torn", "action", "secret", "endurance", "movement", "inability", "entangled", "sacrifice", "scattered", "confused", "limit", "disinterest", "irgnoring", "hidden", "risk", "late"],
+    "high": ["naughty", "hurting", "hideous", "hatred", "pain", "power", "never", "rage", "fierce", "fight", "repugnant", "negative", "destructive", "failure", "forbidding", "cold", "rejection", "dead", "mad", "depressed"]
+  }
+
+  // 0-1 quiet, 2-4 unsettled/active, 5 minor storm, 6 larger storm, 7-9 major storm
+
+
+  function processData() {
+
+
+    let currentKP = "";
+
+    if (0 <= kpf && kpf <= 3) {
+      console.log("low", kpf);
+      currentKP = "low";
+    }
+    if (3 < kpf && kpf <= 6) {
+      console.log("mid", kpf);
+      currentKP = "mid";
+    }
+    if (6 < kpf && kpf <= 9) {
+      console.log("high", kpf);
+      currentKP = "high";
+    }
+
+    
+    let wordsFound = {};
+    let str;
+
+
+    for (let key in obj.words) {
+      let text = obj.words[key].text;
+      obj.words[key].mood = "";
+      obj.words[key].lowCount = 0;
+      obj.words[key].midCount = 0;
+      obj.words[key].highCount = 0;
+      wordsFound[key] = [];
+
+      for (let w in category.low) {
+        if (text.includes(category.low[w])){
+          obj.words[key].mood += "low";
+          obj.words[key].lowCount += 1;
+          wordsFound[key].push(category.low[w]);
+        }
+      }
+
+      for (let w in category.mid) {
+        if (text.includes(category.mid[w])){
+          obj.words[key].mood += "mid";
+          obj.words[key].midCount += 1;
+          wordsFound[key].push(category.mid[w]);
+        }
+      }
+
+      for (let w in category.high) {
+        if (text.includes(category.high[w])){
+          obj.words[key].mood += "high";
+          obj.words[key].highCount += 1;
+          wordsFound[key].push(category.high[w]);
+        }
+      }
+
+      if (obj.words[key].mood === "") {
+        obj.words[key].mood = "none";
+      }
+
+      let lc = obj.words[key].lowCount;
+      let mc = obj.words[key].midCount;
+      let hc = obj.words[key].highCount;
+
+      if (Math.max(lc,mc,hc) == lc) { obj.words[key].overallMood = "low" }
+      if (Math.max(lc,mc,hc) == mc) { obj.words[key].overallMood = "mid" } 
+      if (Math.max(lc,mc,hc) == hc) { obj.words[key].overallMood = "high" }
+
+      wordsFound[key].mood = obj.words[key].overallMood;
+
+      console.log(lc,mc,hc, "max:", Math.max(lc,mc,hc), wordsFound[key].mood);
+
+      
+    }
+
+    // console.log(obj.words);
+    // str = JSON.stringify(obj);
+    console.log("===================================================");
+    console.log("===================================================");
+    console.log("===================================================");
+    // console.log(str);
+    console.log(wordsFound);
+
+
+
+
+    // console.log(wordDataFiltered);
+
+  }
+  
+
+
   function getData() {
+
+
+
+
+    // console.log("parse-text", kpf);
+    
+
+
+
+
+
+
+
     let x = 0;
     let x2 = 120;
     let textChunk = "";
     let checkStrays = "";
     const strayChars = [",", ":", ".", ")", " "];
     for (let panel in panels) {
-      x = parseInt(Math.random()*919980);
+      x = parseInt(Math.random()*920284); // length of total text - 120
       // console.log(`x=${x}, x2=${x2}\n`);
       textChunk = wordData.substring(x, x + x2);
       checkStrays = textChunk.charAt(0);
@@ -38,7 +160,7 @@
     getData();
   }, 80000);
   
-}());
+// }());
 
 /*
 id 0

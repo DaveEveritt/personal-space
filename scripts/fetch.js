@@ -1,7 +1,10 @@
 
 "use strict";
 
-(function(){
+// (function(){
+
+
+  var kpf;
 
   const url = new Request('https://services.swpc.noaa.gov/experimental/products/geospace/geomagnetic-indices.json');
 
@@ -62,8 +65,16 @@
 
   function getDataScale(kp) {
     // 0-1 quiet, 2-4 unsettled/active, 5 minor storm, 6 larger storm, 7-9 major storm
-    let kpf = parseFloat(kp).toFixed(2);
-    // console.log(kpf);
+
+    kpf = parseFloat(kp).toFixed(2);
+    // console.log("fetch", kpf);
+
+    getData();
+
+
+
+
+
     switch (true) {
       case kpf < 1:
         changeSun("1");
@@ -103,7 +114,7 @@
     }
   }
 
-})();
+// })();
 
 /*
 Solar wind directory listing:
