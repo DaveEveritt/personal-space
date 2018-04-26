@@ -40,3 +40,16 @@ An online artwork based on connecting personal diary-like text to astronomical d
 - [ ] find slower sun animation
 - [ ] work out categories
 
+
+
+
+# Fania's edits
+
+To make changes to categories follow these steps:
+
+1. add/change/remove mood keywords (parse-text.js, lines 61-63)
+2. run processData function (comment in line 22, parse-text.js)
+3. print results to console (comment in line 126,127 parse-text.js)
+4. copy all (!) results from console into new.js (let jsonString = ``)
+5. uncomment previous lines again, and then refresh page.
+

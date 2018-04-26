@@ -17,7 +17,7 @@
 
   // ==============================================
 
-  // RUN THIS AGAIN IF UPDATING THE CATEGORIES. COPY CONSOLE LOG FROM LINE 113+114 TO NEW.JS FILE
+  // RUN THIS AGAIN IF UPDATING THE CATEGORIES. COPY CONSOLE LOG FROM LINE 126+127 TO NEW.JS FILE
 
   // window.addEventListener("load", processData);
 
@@ -58,9 +58,11 @@
   
 
   let category = {
-    "low": ["lov", "brill", "wonderful", "sex", "tidy", "excit", "respect", "pleasur", "art", "transcend", "beaut", "gentle", "success", "compassion", "hope", "kind", "nurture", "help", "smil", "beautiful", "comfort", "focus", "desir", "energ", "trust", "proud", "appreciat", "affect", "empath"],
-    "mid": ["realisation", "activism", "dance", "doubt", "unusual", "quirky", "torn", "action", "secret", "endurance", "movement", "inability", "entangled", "sacrifice", "scattered", "confused", "limit", "disinterest", "irgnoring", "hidden", "risk", "late"],
-    "high": ["naughty", "hurting", "hideous", "hatred", "pain", "power", "never", "rage", "fierce", "fight", "repugnant", "negative", "destructive", "failure", "forbidding", "cold", "rejection", "dead", "mad", "depressed"]
+    "low": ["lov", "brill", "wonderful", "sex", "tidy", "excit", "respect", "pleasur", "art", "transcend", "beaut", "gentle", "success", "compassion", "hope", "kind", "nurture", "help", "smil", "beautiful", "comfort", "focus", "desir", "energ", "trust", "proud", "appreciat", "affect", "empath", "brave", "hug"],
+
+    "mid": ["realis", "activ", "danc", "doubt", "unusual", "quirky", "torn", "action", "secret", "endur", "mov", "inabil", "entangl", "sacrif", "scatt", "confus", "limit", "disinterest", "ignor", "hid", "risk", "late", "odd", "obstacle", "hindrance", "lonely", "sorrow", "sudden"],
+
+    "high": ["naught", "hurt", "hideous", "hatred", "pain", "power", "never", "rage", "fierce", "fight", "repugnant", "negative", "destruct", "fail", "forbid", "cold", "reject", "dead", "mad", "depress", "mistake", "kill", "war", "hospital", "funeral", "dead", "attack", "hate", "sad", "fuck", "cry", "bleed"]
   }
 
   // 0-1 quiet, 2-4 unsettled/active, 5 minor storm, 6 larger storm, 7-9 major storm
@@ -118,7 +120,7 @@
 
       wordsFound[key].mood = obj.words[key].overallMood;
 
-      console.log(key, lc,mc,hc, "max:", Math.max(lc,mc,hc), wordsFound[key].mood);
+      // console.log(key, lc,mc,hc, "max:", Math.max(lc,mc,hc), wordsFound[key].mood);
 
     }
 
@@ -139,8 +141,6 @@
 
   function getData() {
 
-    // console.log("parse-text", kpf);
-
     if (0 <= kpf && kpf <= 3) {
       // console.log("low", kpf);
       currentKP = "low";
@@ -153,6 +153,8 @@
       // console.log("high", kpf);
       currentKP = "high";
     }
+
+    // currentKP = "high";
 
     let x = 0;
     let x2 = 120;
