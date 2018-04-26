@@ -58,11 +58,11 @@
   
 
   let category = {
-    "low": ["lov", "brill", "wonderful", "sex", "tidy", "excit", "respect", "pleasur", "art", "transcend", "beaut", "gentle", "success", "compassion", "hope", "kind", "nurture", "help", "smil", "beautiful", "comfort", "focus", "desir", "energ", "trust", "proud", "appreciat", "affect", "empath", "brave", "hug", "nourish"],
+    "low": ["lov", "brill", "wonderful", "sex", "tidy", "excit", "respect", "pleasur", "art", "transcend", "beaut", "gentle", "success", "compassion", "hope", "kind", "nurture", "help", "smil", "beautiful", "comfort", "focus", "desir", "energ", "trust", "proud", "appreciat", "affect", "empath", "brave", "hug", "nourish", "friend"],
 
     "mid": ["realis", "activ", "danc", "doubt", "unusual", "quirky", "torn", "action", "secret", "endur", "mov", "inabil", "entangl", "sacrif", "scatt", "confus", "limit", "disinterest", "ignor", "hid", "risk", "late", "odd", "obstacle", "hindrance", "lonely", "sorrow", "sudden"],
 
-    "high": ["naught", "hurt", "hideous", "hatred", "pain", "power", "never", "rage", "fierce", "fight", "repugnant", "negative", "destruct", "fail", "forbid", "cold", "reject", "dead", "mad", "depress", "mistake", "kill", "war", "hospital", "funeral", "dead", "attack", "hate", "sad", "fuck", "cry", "bleed"]
+    "high": ["naught", "hurt", "hideous", "hatred", "pain", "power", "never", "rage", "fierce", "fight", "repugnant", "negative", "destruct", "fail", "forbid", "cold", "reject", "dead", "mad", "depress", "mistake", "kill", "war", "hospital", "funeral", "died", "attack", "hate", "sad", "fuck", "cry", "bleed", "strong"]
   }
 
   // 0-1 quiet, 2-4 unsettled/active, 5 minor storm, 6 larger storm, 7-9 major storm
@@ -154,7 +154,7 @@
       currentKP = "high";
     }
 
-    // currentKP = "high";
+    // currentKP = "mid";
 
     let x = 0;
     let x2 = 120;
