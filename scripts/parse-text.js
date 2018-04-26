@@ -10,6 +10,8 @@
   let wordDataLow = "";
   let wordDataMid = "";
   let wordDataHigh = "";
+  let currentKP = "";
+
 
   // window.addEventListener("load", getData);
 
@@ -26,6 +28,8 @@
     let text = obj.words[key].text;
     let mood = obj.words[key].overallMood;
 
+    // console.log(mood, mood == "low");
+
     if (mood == "low") {
       wordDataLow += `${text}\n\n`;
     }
@@ -37,9 +41,9 @@
     }
     // wordData += `${obj.words[key].created_date}:\n${text}\n\n`;
   }
-  console.log("low:", wordDataLow.length);
-  console.log("mid:", wordDataMid.length);
-  console.log("high:", wordDataHigh.length);
+  // console.log("low:", wordDataLow.length, wordDataLow);
+  // console.log("mid:", wordDataMid.length, wordDataMid);
+  // console.log("high:", wordDataHigh.length, wordDataHigh);
 
 
   // for (let key in obj.words) {
@@ -63,20 +67,6 @@
 
 
   function processData() {
-
-    let currentKP = "";
-    if (0 <= kpf && kpf <= 3) {
-      console.log("low", kpf);
-      currentKP = "low";
-    }
-    if (3 < kpf && kpf <= 6) {
-      console.log("mid", kpf);
-      currentKP = "mid";
-    }
-    if (6 < kpf && kpf <= 9) {
-      console.log("high", kpf);
-      currentKP = "high";
-    }
     
     let wordsFound = {};
     let str;
@@ -150,8 +140,19 @@
   function getData() {
 
     // console.log("parse-text", kpf);
-    console.log(currentKP);
-    // console.log(wordDataLow);
+
+    if (0 <= kpf && kpf <= 3) {
+      // console.log("low", kpf);
+      currentKP = "low";
+    }
+    if (3 < kpf && kpf <= 6) {
+      // console.log("mid", kpf);
+      currentKP = "mid";
+    }
+    if (6 < kpf && kpf <= 9) {
+      // console.log("high", kpf);
+      currentKP = "high";
+    }
 
     let x = 0;
     let x2 = 120;
@@ -163,15 +164,15 @@
       
 
       if (currentKP == "low") {
-        x = 721605;
+        x = parseInt(Math.random()*721605); // length of total text - 120;
         textChunk = wordDataLow.substring(x, x + x2);
       }
       if (currentKP == "mid") {
-        x = 60884;
+        x = parseInt(Math.random()*60884); // length of total text - 120;
         textChunk = wordDataMid.substring(x, x + x2);
       }
       if (currentKP == "high") {
-        x = 128435;
+        x = parseInt(Math.random()*128435); // length of total text - 120;
         textChunk = wordDataHigh.substring(x, x + x2);
       }
 
