@@ -51,5 +51,6 @@ To make changes to categories follow these steps:
 2. run processData function (comment in line 22, parse-text.js)
 3. print results to console (comment in line 126,127 parse-text.js)
 4. copy all (!) results from console into new.js (let jsonString = ``)
+5. comment in lines 44-46 to get updated totals from console and put them onto lines 169,173,177
 5. uncomment previous lines again, and then refresh page.
 

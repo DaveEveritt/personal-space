@@ -41,9 +41,9 @@
     }
     // wordData += `${obj.words[key].created_date}:\n${text}\n\n`;
   }
-  // console.log("low:", wordDataLow.length, wordDataLow);
-  // console.log("mid:", wordDataMid.length, wordDataMid);
-  // console.log("high:", wordDataHigh.length, wordDataHigh);
+  // console.log("low:", wordDataLow.length);
+  // console.log("mid:", wordDataMid.length);
+  // console.log("high:", wordDataHigh.length);
 
 
   // for (let key in obj.words) {
@@ -58,7 +58,7 @@
   
 
   let category = {
-    "low": ["lov", "brill", "wonderful", "sex", "tidy", "excit", "respect", "pleasur", "art", "transcend", "beaut", "gentle", "success", "compassion", "hope", "kind", "nurture", "help", "smil", "beautiful", "comfort", "focus", "desir", "energ", "trust", "proud", "appreciat", "affect", "empath", "brave", "hug"],
+    "low": ["lov", "brill", "wonderful", "sex", "tidy", "excit", "respect", "pleasur", "art", "transcend", "beaut", "gentle", "success", "compassion", "hope", "kind", "nurture", "help", "smil", "beautiful", "comfort", "focus", "desir", "energ", "trust", "proud", "appreciat", "affect", "empath", "brave", "hug", "nourish"],
 
     "mid": ["realis", "activ", "danc", "doubt", "unusual", "quirky", "torn", "action", "secret", "endur", "mov", "inabil", "entangl", "sacrif", "scatt", "confus", "limit", "disinterest", "ignor", "hid", "risk", "late", "odd", "obstacle", "hindrance", "lonely", "sorrow", "sudden"],
 
@@ -166,15 +166,15 @@
       
 
       if (currentKP == "low") {
-        x = parseInt(Math.random()*721605); // length of total text - 120;
+        x = parseInt(Math.random()*(551929-120)); // length of total text - 120;
         textChunk = wordDataLow.substring(x, x + x2);
       }
       if (currentKP == "mid") {
-        x = parseInt(Math.random()*60884); // length of total text - 120;
+        x = parseInt(Math.random()*(116885-120)); // length of total text - 120;
         textChunk = wordDataMid.substring(x, x + x2);
       }
       if (currentKP == "high") {
-        x = parseInt(Math.random()*128435); // length of total text - 120;
+        x = parseInt(Math.random()*(243805-120)); // length of total text - 120;
         textChunk = wordDataHigh.substring(x, x + x2);
       }
 
