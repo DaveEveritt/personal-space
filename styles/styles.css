@@ -5,7 +5,7 @@ body {
   flex-wrap: wrap;
   /* font-family: Tahoma, Arial, Helvetica, sans-serif; */
   font-size: 4vh;
-  background: #001 url(../images/deep-space.jpg);
+  background: #001 url(../images/hubble-friday.jpg);
 }
 section {
   box-sizing: border-box;
@@ -16,62 +16,59 @@ section {
   text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
-  text-shadow: #fff 0 0 8px;
+  color: rgba(221, 221, 221, 0.75);
+  text-shadow: rgba(221, 221, 221, 0.95) 0 0 7px;
   animation: fading 8s infinite ease-in-out;
 }
 
 section:nth-child(1) {
-  background: #001;
-  color: #ddd;
+  background: rgba(12, 8, 59, .95);
   animation-delay: 11s;
 }
 section:nth-child(2) {
-  background: black;
-  color: white;
+  background: rgba(0, 0, 0, .95);
+  color: rgba(217, 235, 190, 0.75);
   animation-delay: 15s;
 }
 section:nth-child(3) {
-  background: #090;
-  color: white;
+  background: rgba(13, 138, 96, .95);
   animation-delay: 9s;
 }
 section:nth-child(4) {
-  background: #8f5;
-  text-shadow: #001 0 0 4px;
+  background: rgba(184, 235, 102, .95);
+  color: rgba(12, 8, 59, .95);
+  text-shadow: rgba(0, 0, 37, 0.9) 0 0 4px;
   animation-delay: 10s;
 }
 section:nth-child(5) {
-  background: transparent url(../images/sun/sun-1.gif) no-repeat;
-  /* background-size: 120%;
-  background-position: 48% 5%; */
+  background: transparent url(../images/sun/sun-eclipsed.gif) no-repeat;
   /* https://css-tricks.com/almanac/properties/b/background-size/ */
   background-size: 103% auto cover;
   background-position: 50% 50%;
-  color: #001;
+  color: rgba(4, 4, 51, .95);
   font-weight: bold;
   font-size: 0.75em;
   line-height: 3.5vh;
   padding-top: 2.5%;
   animation: none;
+  opacity: .85;
 }
 section:nth-child(6) {
-  background: #001;
-  color: #ddd;
+  background: rgba(0, 3, 48, .95);
   animation-delay: 13s;
 }
 section:nth-child(7) {
-  background: #e03;
-  color: white;
+  background: rgba(182, 25, 130, .95);
   animation-delay: 14s;
 }
 section:nth-child(8) {
-  background: #ddd;
-  text-shadow: #001 0 0 4px;
+  background: rgba(221, 221, 221, .95);
+  color: rgba(143, 21, 102, .95);
+  text-shadow: rgba(0, 0, 17, 0.9) 0 0 4px;
   animation-delay: 8s;
 }
 section:nth-child(9) {
-  color: white;
-  background: #92f;
+  background: rgba(86, 38, 219, .95);
   animation-delay: 12s;
 }
 
@@ -81,6 +78,10 @@ section:nth-child(9) {
   0%,100% { opacity: 0 }
   50% { opacity: 0.9 }
 }
+/* @keyframes colourShift {
+  0%,100% { opacity: 0 }
+  50% { opacity: 0.9 }
+} */
 
 /*
 1 white water
