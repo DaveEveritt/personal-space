@@ -75,7 +75,7 @@ section:nth-child(9) {
 /* animations */
 
 @keyframes fading {
-  0%,100% { opacity: 0 }
+  0%,100% { opacity: 0.1 }
   50% { opacity: 0.9 }
 }
 /* @keyframes colourShift {

@@ -21,7 +21,7 @@
   // ========================================================
 
 
-  let category = {
+  const category = {
     "low": ["lov", "brill", "wonderful", "sex", "tidy", "excit", "respect", "pleasur", "art", "transcend", "beaut", "gentle", "success", "compassion", "hope", "kind", "nurture", "help", "smil", "beautiful", "comfort", "focus", "desir", "energ", "trust", "proud", "appreciat", "affect", "empath", "brave", "hug", "nourish", "friend", "relax", "like", "nest", "close", "happ", "together", "womb", "truth", "touch", "permiss", "grow", "clear", "birth", "play", "young", "wisdom", "gain", "surprise", "humour"],
 
     "mid": ["realis", "activ", "danc", "doubt", "unusual", "quirky", "torn", "action", "secret", "endur", "mov", "inabil", "entangl", "sacrif", "scatt", "confus", "limit", "disinterest", "ignor", "hid", "risk", "late", "odd", "obstacle", "hindrance", "lonely", "sorrow", "sudden", "strange", "confus", "love/hate", "mother", "father", "potential", "body", "transform", "synchron", "surprise", "alert"],

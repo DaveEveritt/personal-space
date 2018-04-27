@@ -3,7 +3,6 @@
 
 // (function(){
 
-
   var kpf;
 
   const url = new Request('https://services.swpc.noaa.gov/experimental/products/geospace/geomagnetic-indices.json');
@@ -70,10 +69,6 @@
     // console.log("fetch", kpf);
 
     getData();
-
-
-
-
 
     switch (true) {
       case kpf < 1:
