@@ -41,7 +41,7 @@ section:nth-child(4) {
   animation-delay: 10s;
 }
 section:nth-child(5) {
-  background: transparent url(../images/sun/sun-eclipsed.gif) no-repeat;
+  background: rgb(2, 0, 12, .85) url(../images/sun/sun-eclipsed.gif) no-repeat;
   /* https://css-tricks.com/almanac/properties/b/background-size/ */
   background-size: 103% auto cover;
   background-position: 50% 50%;
