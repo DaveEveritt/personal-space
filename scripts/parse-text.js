@@ -31,8 +31,6 @@
 
   // 0-1 quiet, 2-4 unsettled/active, 5 minor storm, 6 larger storm, 7-9 major storm
 
-
-
   function processData() {
     
     let wordsFound = {};

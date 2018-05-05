@@ -35,10 +35,13 @@ An online artwork based on connecting personal diary-like text to astronomical d
 - [x] prune stray characters at start of text strings
 - [ ] use .indexOf(' ') to trim before first word
 - [ ] fade changes to text
+- [ ] use HSL to change the saturation of background colours
+- [x] fade text in the Lo-Shu numerical sequence
 - [x] prune short text entries
 - [x] central sun image to reflect intensity
-- [ ] find slower sun animation
-- [ ] work out categories
+- [ ] faster text refresh with higher Kp index
+- [x] select text according to solar intensity (Fania Raczinski)
+- [ ] enable a word search for mobile users
 
 
 
