@@ -82,8 +82,14 @@ section:nth-child(5) span {
   50% { opacity: 0.9 }
 }
 @keyframes pulse {
-  0%,100% { text-shadow: rgba(225, 225, 225, 1) 0 0 10px; }
-  50% { text-shadow: rgba(220, 220, 220, 0.75) 0 0 2px; }
+  0%,100% {
+    text-shadow: rgba(225, 225, 225, 1) 0 0 8px;
+    color: rgba(4, 4, 51, 1);
+  }
+  50% {
+    text-shadow: rgba(220, 220, 220, 0.75) 0 0 2px;
+    color: rgba(16, 16, 51, .85);
+  }
 }
 
 /*
