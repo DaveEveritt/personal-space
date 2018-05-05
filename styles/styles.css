@@ -72,16 +72,19 @@ section:nth-child(9) {
   animation-delay: 12s;
 }
 
+section:nth-child(5) span {
+  animation: pulse 4s infinite ease-in-out;
+}
 /* animations */
 
 @keyframes fading {
   0%,100% { opacity: 0.1 }
   50% { opacity: 0.9 }
 }
-/* @keyframes colourShift {
-  0%,100% { opacity: 0 }
-  50% { opacity: 0.9 }
-} */
+@keyframes pulse {
+  0%,100% { text-shadow: rgba(225, 225, 225, 1) 0 0 10px; }
+  50% { text-shadow: rgba(220, 220, 220, 0.75) 0 0 4px; }
+}
 
 /*
 1 white water

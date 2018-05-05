@@ -163,8 +163,6 @@ file "text",
 title "text",
 created_date "2018-02-03 14:28:35",
 text "text",
-will fit (55chars):
-And you have read my mind again Alice in these prompts!
 
 charAt() for multilingual plane
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt
