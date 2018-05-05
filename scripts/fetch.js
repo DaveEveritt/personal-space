@@ -50,7 +50,7 @@
   // 5 minutes: 5 * 60 * 1000
 
   function dataShowKP(kp, au) {
-    sunPanel.innerHTML = `Kp <span>${getDataScale(kp)}</span><br><br>Solar wind: ${au}AU`;
+    sunPanel.innerHTML = `Kp ${kp} <span>${getDataScale(kp)}</span><br><br>Solar wind: ${au}AU`;
   }
   function dataNoShow(nodata) {
     sunPanel.innerHTML = nodata;
@@ -73,35 +73,35 @@
     switch (true) {
       case kpf < 1:
         changeSun("1");
-        return `${kpf}: peaceful`;
+        return `peaceful`;
         break;
       case kpf <= 1.5:
         changeSun("2");
-        return `${kpf}: relaxed`;
+        return `relaxed`;
         break;
       case kpf < 2:
         changeSun("3");
-        return `${kpf}: stirring`;
+        return `stirring`;
         break;
       case kpf < 4:
         changeSun("4");
-        return `${kpf}: unsettled`;
+        return `unsettled`;
         break;
       case kpf < 5:
         changeSun("5");
-        return `${kpf}: agitated`;
+        return `agitated`;
         break;
       case kpf < 6:
         changeSun("6");
-        return `${kpf}: disturbed`;
+        return `disturbed`;
         break;
       case kpf < 7:
         changeSun("7");
-        return `${kpf}: stormy`;
+        return `stormy`;
         break;
       case kpf <= 10:
         changeSun("8");
-        return `${kpf}: extreme`;
+        return `extreme`;
         break;
       default:
         return "error"

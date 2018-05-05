@@ -83,7 +83,7 @@ section:nth-child(5) span {
 }
 @keyframes pulse {
   0%,100% { text-shadow: rgba(225, 225, 225, 1) 0 0 10px; }
-  50% { text-shadow: rgba(220, 220, 220, 0.75) 0 0 4px; }
+  50% { text-shadow: rgba(220, 220, 220, 0.75) 0 0 2px; }
 }
 
 /*
