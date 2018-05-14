@@ -125,7 +125,7 @@
     let x2 = 120;
     let textChunk = "";
     let checkStrays = "";
-    const strayChars = [",", ":", ".", ")", " ", "'", "\""];
+    const strayChars = [",", ":", ".", ")", " ", "!", "?", "’", "”", "'", "\""];
     for (let panel in panels) {
       
       // DONT FORGET TO UPDATE THESE !!!
