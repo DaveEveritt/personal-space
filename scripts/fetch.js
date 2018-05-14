@@ -3,7 +3,7 @@
 
 // (function(){
 
-  var kpf;
+  let kpf;
 
   const url = new Request('https://services.swpc.noaa.gov/experimental/products/geospace/geomagnetic-indices.json');
 
@@ -104,7 +104,7 @@
         return `extreme`;
         break;
       default:
-        return `no data`;
+        return 'no data';
         break;
     }
   }
