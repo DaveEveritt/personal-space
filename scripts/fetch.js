@@ -104,7 +104,7 @@
         return `extreme`;
         break;
       default:
-        return "error"
+        return `no data`;
         break;
     }
   }
