@@ -79,7 +79,7 @@
         changeSun("2");
         return `relaxed`;
         break;
-      case kpf < 2:
+      case kpf < 2.8:
         changeSun("3");
         return `stirring`;
         break;
