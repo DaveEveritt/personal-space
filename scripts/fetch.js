@@ -46,7 +46,7 @@
 
   setInterval(function(){
     getSpaceData();
-  }, 30000);
+  }, 300000);
   // 5 minutes: 5 * 60 * 1000
 
   function dataShowKP(kp, au) {
