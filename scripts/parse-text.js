@@ -2,16 +2,20 @@
 
 const panels = ["four","nine","two","three","seven","eight","one","six"];
 
-// let obj = JSON.parse(jsonString);
-// let wordDataLow = "";
-// let wordDataMid = "";
-// let wordDataHigh = "";
+let goods = index.filter(x => x.mood == "good");
+let neuts = index.filter(x => x.mood == "neut");
+let bads = index.filter(x => x.mood == "bad");
+// console.log(goods.length, goods);
+// console.log(neuts.length, neuts);
+// console.log(bads.length, bads);
+
 let currentKP = "";
 
 
 
 // get new data every 60 seconds
-setInterval(getData, 60000);
+// setInterval(getData, 60000);
+setInterval(getData, 10000);
 
 
 
@@ -28,61 +32,35 @@ function getData() {
     currentKP = "high";
   }
 
+  console.log(kpf, currentKP);
+
   // for testing
   // currentKP = "mid";
 
-  let x = 0;
-  let x2 = 120;
+  let start = 0;
+  let end = 120;
   let textChunk = "";
   let checkStrays = "";
   const strayChars = [",", ":", ".", ")", " ", "!", "?", "’", "”", "'", "\""];
   for (let panel in panels) {
     
-    // DONT FORGET TO UPDATE THESE !!!
     if (currentKP == "low") {
-      x = parseInt(Math.random()*(819679-120)); // length of total text - 120;
-      while(x > 0 && wordDataLow[x-1] !== " ") {
-        // console.log("not a space before:", x, wordDataLow[x-1]);
-        x--;  // go to start of a word at beginning
-      }
-      while(!strayChars.includes(wordDataLow[x+x2])) {
-        // console.log("not a space at end:", x2, wordDataLow[x+x2]);
-        x2--;  // go to end of a word at end
-      }
-      textChunk = wordDataLow.substring(x, x + x2);
-      // console.log("text: ", textChunk);
+      let rand = Math.floor(Math.random() * goods.length);
+      textChunk = goods[rand].sentence.substring(0, 120);
+      console.log("low", textChunk);
     }
     if (currentKP == "mid") {
-      x = parseInt(Math.random()*(26038-120)); // length of total text - 120;
-      while(x > 0 && wordDataMid[x-1] !== " ") {
-        // console.log("not a space before:", x, wordDataLow[x-1]);
-        x--;  // go to start of a word at beginning
-      }
-      while(!strayChars.includes(wordDataMid[x+x2])) {
-        // console.log("not a space at end:", x2, wordDataLow[x+x2]);
-        x2--;  // go to end of a word at end
-      }
-      textChunk = wordDataMid.substring(x, x + x2);
+      let rand = Math.floor(Math.random() * neuts.length);
+      textChunk = neuts[rand].sentence.substring(0, 120);
+      console.log("mid", textChunk);
     }
     if (currentKP == "high") {
-      x = parseInt(Math.random()*(71482-120)); // length of total text - 120;
-      while(x > 0 && wordDataHigh[x-1] !== " ") {
-        // console.log("not a space before:", x, wordDataLow[x-1]);
-        x--;  // go to start of a word at beginning
-      }
-      while(!strayChars.includes(wordDataHigh[x+x2])) {
-        // console.log("not a space at end:", x2, wordDataLow[x+x2]);
-        x2--;  // go to end of a word at end
-      }
-      textChunk = wordDataHigh.substring(x, x + x2);
+      let rand = Math.floor(Math.random() * bads.length);
+      textChunk = bads[rand].sentence.substring(0, 120);
+      console.log("high", textChunk);
     }
 
-    // checkStrays = textChunk.charAt(0);
-    // if (textChunk.charAt(1) === " " || strayChars.includes(checkStrays)) {
-    //   textChunk = textChunk.substring(1);
-    // }
     document.getElementById(panels[panel]).innerHTML = textChunk;
-    // x += x2;
   }
 }
 

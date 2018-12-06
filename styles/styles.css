@@ -6,6 +6,7 @@ body {
   /* font-family: Tahoma, Arial, Helvetica, sans-serif; */
   font-size: 4vh;
   background: #001 url(../images/hubble-friday.jpg);
+  /* cursor: none; */
 }
 section {
   box-sizing: border-box;
@@ -83,11 +84,11 @@ section:nth-child(5) span {
 }
 @keyframes pulse {
   0%,100% {
-    text-shadow: rgba(225, 225, 225, 1) 0 0 8px;
+    /* text-shadow: rgba(225, 225, 225, 1) 0 0 8px; */
     color: rgba(4, 4, 51, 1);
   }
   50% {
-    text-shadow: rgba(220, 220, 220, 0.75) 0 0 2px;
+    /* text-shadow: rgba(220, 220, 220, 0.75) 0 0 2px; */
     color: rgba(16, 16, 51, .85);
   }
 }
