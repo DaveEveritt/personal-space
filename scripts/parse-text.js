@@ -9,13 +9,26 @@ let bads = index.filter(x => x.mood == "bad");
 // console.log(neuts.length, neuts);
 // console.log(bads.length, bads);
 
-let currentKP = "";
+let all = "";
 
+let allsents = function(arr) {
+  for(let g in arr) {
+    all += arr[g].sentence + " ";
+  }
+  return all;
+}
+
+// console.log(allsents(goods));
+// console.log(allsents(neuts));
+// console.log(allsents(bads));
+
+let currentKP = "";
+// let kpf = 8;  // fake dummy kpf
 
 
 // get new data every 60 seconds
 // setInterval(getData, 60000);
-setInterval(getData, 10000);
+setInterval(getData, 40000);
 
 
 
@@ -32,34 +45,60 @@ function getData() {
     currentKP = "high";
   }
 
-  console.log(kpf, currentKP);
+  // console.log(kpf, currentKP);
 
   // for testing
   // currentKP = "mid";
+
+  let gs = allsents(goods);
+  let ns = allsents(neuts);
+  let bs = allsents(bads);
+  let gsl = gs.length;
+  let nsl = ns.length;
+  let bsl = bs.length;
+
 
   let start = 0;
   let end = 120;
   let textChunk = "";
   let checkStrays = "";
+  let r = 0;
+  let rend = 120;
   const strayChars = [",", ":", ".", ")", " ", "!", "?", "’", "”", "'", "\""];
   for (let panel in panels) {
-    
     if (currentKP == "low") {
-      let rand = Math.floor(Math.random() * goods.length);
-      textChunk = goods[rand].sentence.substring(0, 120);
-      console.log("low", textChunk);
+      r = Math.floor(Math.random() * (gsl - 120));
+      rend = r + 120;
+      while(r > 0 && !strayChars.includes(gs[r-1])) {
+        r--; 
+      }
+      while(!strayChars.includes(gs[rend])) {
+        rend--; 
+      }
+      textChunk = gs.substring(r, r + rend);
     }
     if (currentKP == "mid") {
-      let rand = Math.floor(Math.random() * neuts.length);
-      textChunk = neuts[rand].sentence.substring(0, 120);
-      console.log("mid", textChunk);
+      r = Math.floor(Math.random() * (nsl - 120));
+      rend = r + 120;
+      while(r > 0 && !strayChars.includes(ns[r-1])) {
+        r--; 
+      }
+      while(!strayChars.includes(ns[rend])) {
+        rend--; 
+      }
+      textChunk = ns.substring(r, r + rend);
     }
     if (currentKP == "high") {
-      let rand = Math.floor(Math.random() * bads.length);
-      textChunk = bads[rand].sentence.substring(0, 120);
-      console.log("high", textChunk);
+      r = Math.floor(Math.random() * (bsl - 120));
+      rend = r + 120;
+      while(r > 0 && !strayChars.includes(bs[r-1])) {
+        r--; 
+      }
+      while(!strayChars.includes(bs[rend])) {
+        rend--; 
+      }
+      textChunk = bs.substring(r, r + rend);
     }
-
     document.getElementById(panels[panel]).innerHTML = textChunk;
   }
 }

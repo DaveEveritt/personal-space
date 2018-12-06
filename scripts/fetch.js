@@ -9,6 +9,7 @@
 
   let spaceData = "";
 
+
 /*
   ES6 arrow functions VS JS: https://jakearchibald.com/2015/thats-so-fetch/  
   
