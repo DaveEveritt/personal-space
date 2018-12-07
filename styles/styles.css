@@ -18,7 +18,7 @@ section {
   /* text-overflow: ellipsis; */
   color: rgba(221, 221, 221, 0.75);
   text-shadow: rgba(221, 221, 221, 0.95) 0 0 7px;
-  animation: fading 12s infinite ease-in-out;
+  animation: fading 10s infinite ease-in-out;
 }
 
 section:nth-child(1) {

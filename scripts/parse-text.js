@@ -75,7 +75,8 @@ function getData() {
       while(!strayChars.includes(gs[rend])) {
         rend--; 
       }
-      textChunk = gs.substring(r, r + rend);
+      textChunk = gs.substring(r, rend);
+      // console.log(textChunk);
     }
     if (currentKP == "mid") {
       r = Math.floor(Math.random() * (nsl - 120));
@@ -86,7 +87,8 @@ function getData() {
       while(!strayChars.includes(ns[rend])) {
         rend--; 
       }
-      textChunk = ns.substring(r, r + rend);
+      textChunk = ns.substring(r, rend);
+      // console.log(textChunk);
     }
     if (currentKP == "high") {
       r = Math.floor(Math.random() * (bsl - 120));
@@ -97,9 +99,24 @@ function getData() {
       while(!strayChars.includes(bs[rend])) {
         rend--; 
       }
-      textChunk = bs.substring(r, r + rend);
+      textChunk = bs.substring(r, rend);
+      // console.log(textChunk);
     }
-    document.getElementById(panels[panel]).innerHTML = textChunk;
+    let target = document.getElementById(panels[panel]);
+    // target.style.opacity = 0;
+    target.innerHTML = textChunk;
+
+    // let opa = 0;
+    // function fadetext() { 
+    //   if(opa < 1) {
+    //     opa += 0.1;
+    //     target.style.opacity = opa;
+    //     setTimeout(fadetext,200); 
+    //   }
+    // }
+    // fadetext();
   }
 }
+
+
 
