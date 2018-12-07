@@ -51,7 +51,7 @@
   // 5 minutes: 5 * 60 * 1000
 
   function dataShowKP(kp, au) {
-    sunPanel.innerHTML = `Kp ${kp} <span>${getDataScale(kp)}</span><br><br>Solar wind: ${au}AU`;
+    sunPanel.innerHTML = `<p>Kp ${kp}</p><p>${getDataScale(kp)}</p><p>Solar wind</p><p>${au}AU</p>`;
   }
   function dataNoShow(nodata) {
     sunPanel.innerHTML = nodata;

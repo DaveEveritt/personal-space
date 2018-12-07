@@ -28,7 +28,7 @@ let currentKP = "";
 
 // get new data every 60 seconds
 // setInterval(getData, 60000);
-setInterval(getData, 40000);
+setInterval(getData, 40000);  // 40 seconds
 
 
 
