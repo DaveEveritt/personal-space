@@ -5,7 +5,9 @@
 
   let kpf;
 
-  const url = new Request('https://services.swpc.noaa.gov/experimental/products/geospace/geomagnetic-indices.json');
+  // const url_old = new Request('https://services.swpc.noaa.gov/experimental/products/geospace/geomagnetic-indices.json');
+
+  const url = new Request('https://services.swpc.noaa.gov/products/geospace/planetary-k-index-dst.json');
 
   let spaceData = "";
 
@@ -38,7 +40,8 @@
     .then(function(data) {
       let dl = data.length -1;
       // console.log(dl);
-      dataShowKP(data[dl][2], data[dl][3]);
+      // dataShowKP(data[dl][2], data[dl][3]);
+      dataShowKP(data[dl][1], data[dl][2]);
     }).catch(function() {
       // console.log("Data not available");
       dataNoShow("Data not available");
