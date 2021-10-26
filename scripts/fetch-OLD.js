@@ -5,9 +5,9 @@
 
   let kpf;
 
-  // const url_OLD = new Request('https://services.swpc.noaa.gov/products/geospace/planetary-k-index-dst.json');
+  // const url_old = new Request('https://services.swpc.noaa.gov/experimental/products/geospace/geomagnetic-indices.json');
 
-  const url = new Request('https://services.swpc.noaa.gov/products/noaa-planetary-k-index.json');
+  const url = new Request('https://services.swpc.noaa.gov/products/geospace/planetary-k-index-dst.json');
 
   let spaceData = "";
 
@@ -19,7 +19,16 @@
   fetch(url).then(r => r.json())
     .then(data => console.log(data))
     .catch(e => console.log("Ooops"))
-    */
+
+  OLD:
+  fetch(url).then(function(response) {
+    return response.json();
+  }).then(function(data) {
+    console.log(data);
+  }).catch(function() {
+    console.log("Booo");
+  });
+*/
   window.addEventListener("load", getSpaceData);
 
   function getSpaceData() {
@@ -60,8 +69,8 @@
   function getDataScale(kp) {
     // 0-1 quiet, 2-4 unsettled/active, 5 minor storm, 6 larger storm, 7-9 major storm
 
-    kpf = parseFloat(Kp_fraction).toFixed(2);
-    console.log("fetch", kpf);
+    kpf = parseFloat(kp).toFixed(2);
+    // console.log("fetch", kpf);
 
     getData();
 
