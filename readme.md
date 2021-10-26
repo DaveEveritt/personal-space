@@ -1,8 +1,8 @@
-# Personal Space
+# “Personal Space”
 
 Dave and Fania Everitt, with Alice Tuppen-Corps
 
-An online artwork extracting individual diary entries containing words selected according to the intensity of live space weather data.
+An online artwork extracting phrases from individual diary entries containing words selected according to the intensity of live space weather data.
 
 ## The text
 
@@ -24,3 +24,9 @@ These are used to filter the text and modify the display in real time.
 These are refreshed according to the numerical order of the Chinese mathematical “magic square” of three, known as the Lo-Shu, historically used to lend order to cultural activities.
 
 This provides a connection between the impersonality of space weather and the very personal narratives. The central panel—usually allocated to “Earth”—displays live space weather, the colour of the rotating sun reflecting its current intensity.
+
+---
+
+## TO DO
+
+- [ ] [rename repo](https://github.blog/2013-05-16-repository-redirects-are-here/) and [redirect pages](https://gist.github.com/domenic/1f286d415559b56d725bee51a62c24a7)
