@@ -30,11 +30,9 @@
     })
     .then(function(data) {
       let dl = data.length -1;
-      // console.log(dl);
-      // dataShowKP(data[dl][2], data[dl][3]);
-      dataShowKP(data[dl][1], data[dl][2]);
+      dataShowKP(data[dl][2], data[dl][3]);
+      // dataShowKP(data[dl][1], data[dl][2]);
     }).catch(function() {
-      // console.log("Data not available");
       dataNoShow("Data not available");
     });
   }
@@ -60,8 +58,8 @@
   function getDataScale(kp) {
     // 0-1 quiet, 2-4 unsettled/active, 5 minor storm, 6 larger storm, 7-9 major storm
 
-    kpf = parseFloat(Kp_fraction).toFixed(2);
-    console.log("fetch", kpf);
+    kpf = parseFloat(kp).toFixed(2);
+    // console.log(kpf);
 
     getData();
 
