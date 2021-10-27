@@ -19,7 +19,7 @@
   fetch(url).then(r => r.json())
     .then(data => console.log(data))
     .catch(e => console.log("Ooops"))
-    */
+*/
   window.addEventListener("load", getSpaceData);
 
   function getSpaceData() {
@@ -31,7 +31,6 @@
     .then(function(data) {
       let dl = data.length -1;
       dataShowKP(data[dl][2], data[dl][3]);
-      // dataShowKP(data[dl][1], data[dl][2]);
     }).catch(function() {
       dataNoShow("Data not available");
     });
@@ -51,7 +50,6 @@
 
   const sunPanel = document.getElementById("five");
   function changeSun(file) {
-    // console.log(file);
     sunPanel.style.backgroundImage = `url(images/sun/sun-${file}.gif)`;
   }
 
@@ -59,7 +57,6 @@
     // 0-1 quiet, 2-4 unsettled/active, 5 minor storm, 6 larger storm, 7-9 major storm
 
     kpf = parseFloat(kp).toFixed(2);
-    // console.log(kpf);
 
     getData();
 
@@ -124,8 +121,6 @@ http://services.swpc.noaa.gov/products/summary/solar-wind-speed.json
 {"WindSpeed":"348","TimeStamp":"2018-04-15 09:44:00.000"}
 https://services.swpc.noaa.gov/products/noaa-estimated-planetary-k-index-1-minute.json
 "time_tag","estimated_kp","kp"],["2018-04-15 08:47:00",1.667,"2M"]
-
-https://services.swpc.noaa.gov/products/geospace/planetary-k-index-dst.json
 
 https://scotch.io/tutorials/how-to-use-the-javascript-fetch-api-to-get-data
 */

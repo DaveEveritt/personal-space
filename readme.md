@@ -30,3 +30,4 @@ This provides a connection between the impersonality of space weather and the ve
 ## TO DO
 
 - [ ] [rename repo](https://github.blog/2013-05-16-repository-redirects-are-here/) and [redirect pages](https://gist.github.com/domenic/1f286d415559b56d725bee51a62c24a7)
+- [ ] Check the JS comment above `getSpaceData()` for simplest approach
