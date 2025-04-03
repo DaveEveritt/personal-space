@@ -40,6 +40,8 @@ section:nth-child(4) {
   text-shadow: rgba(0, 0, 37, 0.9) 0 0 4px;
   animation-delay: 10s;
 }
+
+/* central sun panel */
 section:nth-child(5) {
   background: rgb(2, 0, 12, .85) url(../images/sun/sun-eclipsed.gif) no-repeat;
   /* https://css-tricks.com/almanac/properties/b/background-size/ */
@@ -55,8 +57,20 @@ section:nth-child(5) {
   justify-content: center;
 }
 section:nth-child(5) p {
-  margin: 0.3em;
+  margin: 0.25em;
 }
+section:nth-child(5) .impact {
+  font-size: .6em;
+  padding: 0;
+}
+section:nth-child(5) .scale {
+  white-space: nowrap;
+}
+section:nth-child(5) .severity {
+  margin-top: 1.75em;
+}
+/* /central sun panel */
+
 section:nth-child(6) {
   background: rgba(0, 3, 48, .95);
   animation-delay: 13s;

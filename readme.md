@@ -1,8 +1,10 @@
 # “Personal Space”
 
+[View here](https://daveeveritt.github.io/personal-space/)
+
 Dave and Fania Everitt, with Alice Tuppen-Corps
 
-An online artwork extracting phrases from individual diary entries containing words selected according to the intensity of live space weather data.
+An online artwork extracting phrases from individual diary entries, containing words that match the intensity of live space weather data.
 
 ## The text
 
@@ -12,12 +14,11 @@ The text on the screen is continually refreshed from over 500 of these intimate 
 
 ## The space weather
 
-The central panel shows two measures of live “space weather”:
+The central live “space weather” panel shows the intensity of geomagnetic activity affecting Earth’s magnetic field: the Kp index.
+This measure of intensity are used to filter the text and modify the display in real time.
 
-- intensity of geomagnetic activity affecting Earth’s magnetic field: the Kp index
-- extent of the solar wind: in AU (1 Astronomical Unit = distance of Earth from Sun)
-
-These are used to filter the text and modify the display in real time.
+<!-- The central panel shows two measures of live “space weather”: -->
+<!-- - extent of the solar wind: in AU (1 Astronomical Unit = distance of Earth from Sun) -->
 
 ## The nine panels
 
@@ -29,9 +30,9 @@ This provides a connection between the impersonality of space weather and the ve
 
 ## TO DO
 
-- [ ] [rename repo](https://github.blog/2013-05-16-repository-redirects-are-here/) and [redirect pages](https://gist.github.com/domenic/1f286d415559b56d725bee51a62c24a7)
+- [ ] [redirect space-weather-words to personal-space](https://github.blog/2013-05-16-repository-redirects-are-here/) and [redirect pages](https://gist.github.com/domenic/1f286d415559b56d725bee51a62c24a7)
 - [ ] Check the JS comment above `getSpaceData()` for simplest approach
-- [ ] Use [different data](https://services.swpc.noaa.gov/products/solar-wind/plasma-1-day.json) for density, [speed](https://services.swpc.noaa.gov/products/summary/solar-wind-speed.json), temperature
+- [ ] Investigate [different data](https://services.swpc.noaa.gov/products/solar-wind/plasma-1-day.json) for density, [speed](https://services.swpc.noaa.gov/products/summary/solar-wind-speed.json), temperature
 
 ---
 
