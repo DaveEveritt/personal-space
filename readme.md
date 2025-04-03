@@ -4,7 +4,7 @@
 
 Dave and Fania Everitt, with Alice Tuppen-Corps
 
-An online artwork that extracts phrases from hundreds of individual diary entries, by finding words that match the intensity of live space weather data, measured from 0-9.
+This [online artwork](https://daveeveritt.github.io/personal-space/) extracts amd refreshes phrases from hundreds of individual diary entries, finding words that match the intensity of live space weather data, measured from 0-9.
 
 ## The Diary Texts
 
