@@ -33,6 +33,7 @@ This provides a connection between the impersonality of space weather and the ve
 - [ ] [redirect space-weather-words to personal-space](https://github.blog/2013-05-16-repository-redirects-are-here/) and [redirect pages](https://gist.github.com/domenic/1f286d415559b56d725bee51a62c24a7)
 - [ ] Check the JS comment above `getSpaceData()` for simplest approach
 - [ ] Investigate [different data](https://services.swpc.noaa.gov/products/solar-wind/plasma-1-day.json) for density, [speed](https://services.swpc.noaa.gov/products/summary/solar-wind-speed.json), temperature
+- [ ] add `<meta http-equiv=”Permissions-Policy” content=”interest-cohort=()”>` (FLoC) to show no [interest-based tracking](https://www.positioniseverything.net/error-with-permissions-policy-header-unrecognized-feature-interest-cohort./)
 
 ---
 
