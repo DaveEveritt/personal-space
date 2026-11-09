@@ -2,9 +2,10 @@
 
 const panels = ["four","nine","two","three","seven","eight","one","six"];
 
-let goods = index.filter(x => x.mood == "good");
-let neuts = index.filter(x => x.mood == "neut");
-let bads = index.filter(x => x.mood == "bad");
+let goods = jsonString.filter(x => x.mood == "good");
+let neuts = jsonString.filter(x => x.mood == "neut");
+let bads = jsonString.filter(x => x.mood == "bad");
+// let goods = index.filter(x => x.mood == "good");
 // console.log(goods.length, goods);
 // console.log(neuts.length, neuts);
 // console.log(bads.length, bads);

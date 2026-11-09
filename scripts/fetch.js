@@ -5,10 +5,8 @@
 
   let kpf;
 
-  // const url_OLD = new Request('https://services.swpc.noaa.gov/products/geospace/planetary-k-index-dst.json');
-
   const url = new Request('https://services.swpc.noaa.gov/products/noaa-planetary-k-index.json');
-  // ["2025-03-27 00:00:00.000","4.00","27","8"]
+  // let spaceData = ["2025-03-27 00:00:00.000","4.00","27","8"]
   let spaceData = "";
 
 
