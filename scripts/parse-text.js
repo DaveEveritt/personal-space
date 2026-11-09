@@ -5,24 +5,9 @@ const panels = ["four","nine","two","three","seven","eight","one","six"];
 let goods = index.filter(x => x.mood == "good");
 let neuts = index.filter(x => x.mood == "neut");
 let bads = index.filter(x => x.mood == "bad");
-// let goods = index.filter(x => x.mood == "good");
 // console.log(goods.length, goods);
 // console.log(neuts.length, neuts);
 // console.log(bads.length, bads);
-
-/*
-{"words":
-  [{"id":0
-  "file":"kerry noticings/BRILLIANT AND WONDERFUL!!! SENDING LOVE BACKATCH KELLY FK"
-  "title":"BRILLIANT AND WONDERFUL!!! SENDING LOVE BACKATCH KELLY FK"
-  "created_date":"2018-02-03 14:28:35"
-  "text":"Super sexy super messy kerry welly shoe Yes! (going to need send mrs wiggy winkle round to do some tidying and perfuming… or maybe mr. mcgregor to discipline… or naughty peter rabbit… whilst I go and dig diggory diggory delvet some more…"
-  "mood":"lowlowhigh"
-  "lowCount":2
-  "midCount":0
-  "highCount":1
-  "overallMood":"low"}
-*/
 
 let all = "";
 
@@ -41,11 +26,7 @@ let currentKP = "";
 
 
 // get new data every 60 seconds
-// setInterval(getData
-//  60000);
 setInterval(getData, 40000);  // 40 seconds
-
-
 
 function getData() {
 
