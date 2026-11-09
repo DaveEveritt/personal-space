@@ -23,7 +23,7 @@
   function getSpaceData() {
     fetch(url)
     .then(function (response) {
-      // console.log(`response: ${response.status}`);
+      console.log(`response: ${response.status}`);
       return response.json();
     })
     .then(function(data) {
