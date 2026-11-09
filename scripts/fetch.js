@@ -21,13 +21,12 @@
   function getSpaceData() {
     fetch(url)
     .then(function (response) {
-      console.log(`response: ${response.status}`);
+      // console.log(`response: ${response.status}`);
       return response.json();
     })
     .then(function(data) {
       let dl = data.length -1;
-      dataShowKP(data[dl][1]);
-      // dataShowKP(data[dl][1], data[dl][2]);
+      dataShowKP(data[dl].Kp);
     }).catch(function() {
       dataNoShow("Data not available");
     });

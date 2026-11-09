@@ -27,6 +27,13 @@ This connects the impersonality of space weather with the very personal narrativ
 
 ---
 
+## How to
+
+- setup index.html: comment in create-index.js, compromise.min.js, new.js
+- create-index uses new.js to create content (copy from console) for index.js
+- index.html: comment out create-index.js, compromise.min.js, new.js
+- in fetch.js: check that `getSpaceData()` get correct api data
+
 ## TO DO
 
 - [ ] Check the JS comment above `getSpaceData()` for simplest approach
